@@ -1,14 +1,18 @@
-// Accept only Loom sharing/embed links. Never embed arbitrary URLs from config.
+// Accept only Loom links and the verified Aione Loom wrapper. Never embed arbitrary URLs.
 export function loomLinks(value) {
   if (typeof value !== 'string' || !value.trim()) return null;
   let parsed;
   try { parsed = new URL(value.trim()); } catch { return null; }
   if (parsed.protocol !== 'https:' || parsed.username || parsed.password || parsed.port) return null;
-  if (!['loom.com', 'www.loom.com'].includes(parsed.hostname)) return null;
-  const match = parsed.pathname.match(/^\/(?:share|embed)\/([a-f0-9]{32})\/?$/i);
+  const isAione = parsed.hostname === 'loom.aione.co.jp';
+  if (!isAione && !['loom.com', 'www.loom.com'].includes(parsed.hostname)) return null;
+  const match = parsed.pathname.match(isAione
+    ? /^\/v\/([a-f0-9]{32})\/?$/i
+    : /^\/(?:share|embed)\/([a-f0-9]{32})\/?$/i);
   if (!match) return null;
   const id = match[1].toLowerCase();
-  return { embed: `https://www.loom.com/embed/${id}`, share: `https://www.loom.com/share/${id}` };
+  const options = isAione ? '?hideEmbedTopBar=true' : '';
+  return { embed: `https://www.loom.com/embed/${id}${options}`, share: `https://www.loom.com/share/${id}` };
 }
 
 export function validateVideos(data) {
@@ -21,7 +25,7 @@ export function validateVideos(data) {
     }
     if (typeof video.url !== 'string') throw new Error('Video URLs must be strings (empty is allowed).');
     const links = loomLinks(video.url);
-    if (video.url.trim() && !links) throw new Error(`Video ${video.id} must use a valid HTTPS Loom URL.`);
+    if (video.url.trim() && !links) throw new Error(`Video ${video.id} must use a valid HTTPS Loom or Aione URL.`);
     return { id: video.id, title: video.title.trim(), links };
   });
 }

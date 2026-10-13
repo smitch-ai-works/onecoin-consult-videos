@@ -1,4 +1,4 @@
-import { validateVideos } from './video-config.js';
+import { validateVideos } from './video-config.js?v=4';
 
 const numbers = ['①', '②', '③'];
 
