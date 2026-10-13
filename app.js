@@ -55,7 +55,8 @@ async function loadVideos() {
     document.querySelectorAll('.video-nav a').forEach((link, index) => {
       const number = document.createElement('span');
       number.textContent = numbers[index];
-      link.replaceChildren(number, document.createTextNode(videos[index].title));
+      link.setAttribute('aria-label', `動画${videos[index].id}：${videos[index].title}`);
+      link.replaceChildren(number, document.createTextNode(`動画${videos[index].id}`));
     });
   } catch {
     const status = document.querySelector('#load-status');

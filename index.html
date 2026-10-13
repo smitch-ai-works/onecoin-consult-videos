@@ -5,32 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="すみっちのワンコインコンサル。面談前に見ておいてほしい3本の動画と、当日の準備をご案内します。">
-  <meta name="theme-color" content="#19336b">
+  <meta name="theme-color" content="#003e32">
   <title>面談前の3本の動画 | すみっちのワンコインコンサル</title>
-  <link rel="stylesheet" href="./styles.css?v=2">
-  <script type="module" src="./app.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css?v=3">
+  <script type="module" src="./app.js?v=3"></script>
 </head>
 <body>
   <a class="skip-link" href="#videos">動画へ進む</a>
   <header class="site-header">
     <a class="brand" href="#top">すみっち<span>ワンコインコンサル</span></a>
-    <span class="header-note">面談前のご案内</span>
+    <a class="header-link" href="#videos">動画を確認する</a>
   </header>
-  <main id="top" class="layout">
-    <div class="introduction">
-      <div class="intro-inner">
-        <h1>面談の前に、<br>この3本を。</h1>
-        <p class="lead">当日の時間を、次の一歩につなげるために。</p>
-        <p class="instruction">①から順に、<br>必ず見ておいてください！</p>
-        <nav class="video-nav" aria-label="動画の目次">
-          <a href="#video-1"><span>①</span>今、AI副業を始める理由</a>
-          <a href="#video-2"><span>②</span>お金と時間を使って学ぶ理由</a>
-          <a href="#video-3"><span>③</span>面談から、行動へ</a>
-        </nav>
-        <p class="intro-note">途中で止めても、このページから<br>また見ることができます。</p>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="hero-label">面談前の3本の動画</p>
+          <h1 id="hero-title">面談の前に、<br><span>この3本を。</span></h1>
+          <div class="hero-bottom">
+            <p class="lead">当日の時間を、<br>次の一歩につなげるために。</p>
+            <p class="instruction">①から順に、<br>必ず見ておいて<span class="narrow-break"><br></span>ください！</p>
+            <a class="hero-button" href="#videos">3本の動画へ</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <img class="hero-person" src="./assets/smitch-cutout.png" alt="" width="1141" height="1378" fetchpriority="high">
+        </div>
       </div>
-    </div>
+    </section>
     <div class="content">
+      <nav class="video-nav" aria-label="動画の目次">
+        <a href="#video-1" aria-label="動画1：今、AI副業を始める理由"><span>①</span>動画1</a>
+        <a href="#video-2" aria-label="動画2：お金と時間を使って学ぶ理由"><span>②</span>動画2</a>
+        <a href="#video-3" aria-label="動画3：面談から、行動へ"><span>③</span>動画3</a>
+      </nav>
       <div id="videos" class="videos" aria-label="面談前に見る3本の動画">
         <section id="video-1" class="video-section" aria-labelledby="title-1">
           <h2 id="title-1"><span class="number">①</span><span>今、AI副業を始める理由</span></h2>
@@ -46,7 +57,7 @@
         </section>
       </div>
       <section class="preparation" aria-labelledby="preparation-title">
-        <h2 id="preparation-title">見終わったら、当日の準備を。</h2>
+        <h2 id="preparation-title">見終わったら、<span>当日の準備を。</span></h2>
         <ul>
           <li>聞きたいことをメモしておいてくださいね！</li>
           <li>Zoomの準備もお願いします。</li>

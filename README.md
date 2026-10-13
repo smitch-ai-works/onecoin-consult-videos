@@ -3,6 +3,9 @@
 すみっちの面談前動画を1つのURLで案内する、GitHub Pages用の静的ページです。
 現在は動画URL未設定のため、3本とも「公開準備中」と表示します。
 
+デザインは濃い緑と黄色のワンコインコンサルのビジュアルに合わせています。
+人物素材は `assets/smitch-cutout.png`、刷毛の帯と背景の質感はSVGです。
+
 視聴ページ： https://smitch-ai-works.github.io/onecoin-consult-videos/
 
 リポジトリ： https://github.com/smitch-ai-works/onecoin-consult-videos
