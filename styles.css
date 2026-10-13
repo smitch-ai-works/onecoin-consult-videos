@@ -76,7 +76,6 @@ h1 { font-size: clamp(34px, 3.7vw, 50px); line-height: 1.55; margin: 0 0 22px; c
   h1 { font-size: 38px; margin-bottom: 16px; line-height: 1.45; }
   .lead { font-size: 13px; margin-bottom: 26px; max-width: none; }
   .instruction { font-size: 17px; margin-bottom: 24px; }
-  .instruction br { display: none; }
   .video-nav { gap: 9px; }
   .video-nav a { font-size: 12px; }
   .video-nav span { font-size: 18px; }
@@ -101,6 +100,5 @@ h1 { font-size: clamp(34px, 3.7vw, 50px); line-height: 1.55; margin: 0 0 22px; c
   .brand span { font-size: 10px; }
   h1 { font-size: 34px; }
   .instruction { font-size: 15px; }
-  .instruction br { display: initial; }
   .video-section h2 { font-size: 15px; gap: 8px; }
 }

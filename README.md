@@ -3,6 +3,10 @@
 すみっちの面談前動画を1つのURLで案内する、GitHub Pages用の静的ページです。
 現在は動画URL未設定のため、3本とも「公開準備中」と表示します。
 
+視聴ページ： https://smitch-ai-works.github.io/onecoin-consult-videos/
+
+リポジトリ： https://github.com/smitch-ai-works/onecoin-consult-videos
+
 ## 動画を入れる
 
 `videos.json` の3つの `url` に、それぞれLoomの共有URLを入れて `main` にpushしてください。
